@@ -115,7 +115,7 @@ def generate_image(request: GenerateRequest):
         PNG image as binary response
     Example request body:
         {
-            "prompt": "a red fox in a snoy forest, digital art",
+            "prompt": "a red fox in a snow forest, digital art",
             "num_steps": 4,
             "seed": 42
         }
@@ -186,6 +186,7 @@ if __name__ == "__main__":
     # use "127.0.0.1" for local access
     uvicorn.run(
         app,
+        # host="127.0.0.1",
         host="0.0.0.0",
         port=8000,
         log_level="warning"

@@ -186,7 +186,7 @@ def parse_args():
         help="Image height in pixels (default: 512)"
     )
     parser.add_argument(
-        "--output",
+        "--filename",
         default=None,
         help="Output filename (default: output_<timestamp>.png)"
     )
@@ -218,8 +218,8 @@ def main():
         prompt = input("Enter your prompt: ".strip())
 
     # Destination filename
-    if args.output:
-        output_path = args.output
+    if args.filename:
+        output_path = args.filename
     else:
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         output_path = f"output_{timestamp}.png"
